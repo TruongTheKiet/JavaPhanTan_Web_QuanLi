@@ -1,0 +1,14 @@
+<!DOCTYPE tiles-definitions PUBLIC
+      "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" 
+      "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+    <definition name="Page" template="template/template.jsp">
+        <put-attribute name="header" value="/WEB-INF/pages/_header.jsp" />
+        <put-attribute name="nava_header" value="/WEB-INF/pages/_nava_header.jsp" />
+        <put-attribute name="left_menu" value="/WEB-INF/pages/_left_menu.jsp" />
+        <put-attribute name="footer" value="/WEB-INF/pages/_footer.jsp" />
+    </definition>
+    <definition name="Dashboard" extends="Page">
+        <put-attribute name="_content" value="/WEB-INF/pages/dashboard_content.jsp"/>
+    </definition>
+</tiles-definitions>
