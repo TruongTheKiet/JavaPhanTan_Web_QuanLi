@@ -8,7 +8,7 @@
         <put-attribute name="left_menu" value="/WEB-INF/pages/_left_menu.jsp" />
         <put-attribute name="footer" value="/WEB-INF/pages/_footer.jsp" />
     </definition>
-    <definition name="Dashboard" extends="Page">
-        <put-attribute name="_content" value="/WEB-INF/pages/dashboard_content.jsp"/>
+    <definition name="Restaurants" extends="Page">
+        <put-attribute name="_content" value="/WEB-INF/pages/restaurants_search_content.jsp"/>
     </definition>
 </tiles-definitions>

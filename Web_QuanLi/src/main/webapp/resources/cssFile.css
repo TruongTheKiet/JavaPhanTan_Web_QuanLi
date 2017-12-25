@@ -1,0 +1,13 @@
+tr {
+width: 100%;
+display: inline-table;
+}
+
+.weighttbody{
+  overflow-y: scroll;
+  height: 470px;
+  width: 96%;
+  position: absolute;
+}
+
+    

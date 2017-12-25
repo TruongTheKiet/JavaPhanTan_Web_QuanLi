@@ -14,31 +14,31 @@
         </div>
         <div class="header-shadow"></div>
         <ul class="nav">
-            <li>
+<!--            <li class="${activeDashboard}">
                 <a href="dashboard">
                     <img class="tab-icon" src="resources/assets/img/icon_dashboard.png"/>
                     <p>Dashboard</p>
                 </a>
-            </li>
-            <li class="active">
-                <a href="menus">
-                    <img class="tab-icon" src="resources/assets/img/icon_menus.png"/>
-                    <p>Menus</p>
-                </a>
-            </li>
-            <li>
-                <a href="dishes">
-                    <img class="tab-icon" src="resources/assets/img/icon_dishes.png"/>
-                    <p>Dishes</p>
-                </a>
-            </li>
-            <li>
+            </li>-->
+            <li class="${activeRestaurants}">
                 <a href="restaurants">
                     <img class="tab-icon" src="resources/assets/img/icon_restaurants.png"/>
                     <p>Restaurants</p>
                 </a>
             </li>
-            <li>
+            <li class="${activeMenu}">
+                <a href="menus">
+                    <img class="tab-icon" src="resources/assets/img/icon_menus.png"/>
+                    <p>Menus</p>
+                </a>
+            </li>
+            <li class="${activeDishes}">
+                <a href="dishes">
+                    <img class="tab-icon" src="resources/assets/img/icon_dishes.png"/>
+                    <p>Dishes</p>
+                </a>
+            </li>
+            <li class="${activeReport}">
                 <a href="reports">
                     <img class="tab-icon" src="resources/assets/img/icon_reports.png"/>
                     <p>Reports</p>
