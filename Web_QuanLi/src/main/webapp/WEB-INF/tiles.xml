@@ -11,4 +11,10 @@
     <definition name="Restaurants" extends="Page">
         <put-attribute name="_content" value="/WEB-INF/pages/restaurants_search_content.jsp"/>
     </definition>
+    <definition name="AddRestaurants" extends="Page">
+        <put-attribute name="_content" value="/WEB-INF/pages/restaurants_add_content.jsp"/>
+    </definition>
+    <definition name="Menu" extends="Page">
+        <put-attribute name="_content" value="/WEB-INF/pages/menu_content.jsp"/>
+    </definition>
 </tiles-definitions>

@@ -22,7 +22,7 @@
 
 <!-- Light Bootstrap Table Core javascript and methods for Demo purpose -->
 <script src="resources/assets/js/light-bootstrap-dashboard.js"></script>
-
+<script src="resources/jsFile.js"></script>
 <!--<script type="text/javascript">
     $(document).ready(function() {
 

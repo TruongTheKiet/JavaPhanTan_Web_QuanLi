@@ -21,13 +21,13 @@
                 </a>
             </li>-->
             <li class="${activeRestaurants}">
-                <a href="restaurants">
+                <a href="/Restaurants">
                     <img class="tab-icon" src="resources/assets/img/icon_restaurants.png"/>
                     <p>Restaurants</p>
                 </a>
             </li>
             <li class="${activeMenu}">
-                <a href="menus">
+                <a href="/Menu">
                     <img class="tab-icon" src="resources/assets/img/icon_menus.png"/>
                     <p>Menus</p>
                 </a>

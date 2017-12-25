@@ -4,9 +4,33 @@
         <servlet-name>Restaurants</servlet-name>
         <servlet-class>com.javateam.web_quanli.controller.Restaurants</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>addRestaurants</servlet-name>
+        <servlet-class>com.javateam.web_quanli.controller.addRestaurants</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Menu</servlet-name>
+        <servlet-class>com.javateam.web_quanli.controller.Menu</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>editMenu</servlet-name>
+        <servlet-class>com.javateam.web_quanli.controller.editMenu</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Restaurants</servlet-name>
         <url-pattern>/Restaurants</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>addRestaurants</servlet-name>
+        <url-pattern>/addRestaurants</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Menu</servlet-name>
+        <url-pattern>/Menu</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>editMenu</servlet-name>
+        <url-pattern>/editMenu</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
