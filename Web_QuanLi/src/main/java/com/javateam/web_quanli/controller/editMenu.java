@@ -28,16 +28,7 @@ public class editMenu extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String url = this.defaultUrl + "/getAllDanhMuc";
-        request.setAttribute("page", "Menu");
-        request.setAttribute("title", "Menu");
-        request.setAttribute("activeMenu", "active");
-        String objectJSON = helper.getData(url);
-        List<DanhMucMonAn> listDanhMucMonAn = helper.parseDanhMucMonAn(objectJSON);
-        request.setAttribute("listDanhMuc", listDanhMucMonAn);
-        String view = "/WEB-INF/index.jsp";
-        RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(view);
-        dispatcher.forward(request, response);
+       response.sendRedirect("Menu");
     }
 
     @Override
@@ -50,8 +41,7 @@ public class editMenu extends HttpServlet {
         danhmuc.tenDanhMuc = name;
         danhmuc.id = id;
         helper.pushData(url, helper.parseClassToJson(danhmuc), "PUT");
-
-        this.doGet(request, response);
+        response.sendRedirect("/Menu");
     }
 
     @Override

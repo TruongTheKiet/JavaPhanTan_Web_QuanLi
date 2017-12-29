@@ -33,7 +33,7 @@
                 </a>
             </li>
             <li class="${activeDishes}">
-                <a href="dishes">
+                <a href="searchDishes">
                     <img class="tab-icon" src="resources/assets/img/icon_dishes.png"/>
                     <p>Dishes</p>
                 </a>

@@ -11,6 +11,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.javateam.web_quanli.model.ChiNhanh;
 import com.javateam.web_quanli.model.DanhMucMonAn;
+import com.javateam.web_quanli.model.Menu;
+import com.javateam.web_quanli.model.MonAn;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -36,7 +38,7 @@ public class Helper {
             HttpURLConnection con = (HttpURLConnection) obj.openConnection();
             con.setRequestMethod(action);
             con.setRequestProperty("User-Agent", USER_AGENT);
-             con.setRequestProperty("Content-Type", "application/json");
+            con.setRequestProperty("Content-Type", "application/json");
             // For POST only - START
             con.setDoOutput(true);
             OutputStream os = con.getOutputStream();
@@ -45,7 +47,7 @@ public class Helper {
             os.flush();
             os.close();
             int responseCode = con.getResponseCode();
-           if (responseCode == HttpURLConnection.HTTP_OK) { //success
+            if (responseCode == HttpURLConnection.HTTP_OK) { //success
                 BufferedReader in = new BufferedReader(new InputStreamReader(
                         con.getInputStream()));
                 String inputLine;
@@ -56,7 +58,7 @@ public class Helper {
                 }
                 in.close();
 
-               return response.toString();
+                return response.toString();
             } else {
                 return "error";
             }
@@ -123,6 +125,70 @@ public class Helper {
             List<DanhMucMonAn> jsonToDanhMucMonAnList = objectMapper.readValue(objectJson, mapType);
 
             return jsonToDanhMucMonAnList;
+        } catch (IOException ex) {
+            return null;
+        }
+    }
+
+    public List<MonAn> parseMonAn(String objectJson) {
+        try {
+            ObjectMapper objectMapper = new ObjectMapper();
+            //Set pretty printing of json
+            objectMapper.enable(SerializationFeature.INDENT_OUTPUT);
+
+            TypeReference<List<MonAn>> mapType = new TypeReference<List<MonAn>>() {
+            };
+            List<MonAn> jsonToMonAnList = objectMapper.readValue(objectJson, mapType);
+
+            return jsonToMonAnList;
+        } catch (IOException ex) {
+            return null;
+        }
+    }
+
+    public List<Menu> parseMenu(String objectJson) {
+        try {
+            ObjectMapper objectMapper = new ObjectMapper();
+            //Set pretty printing of json
+            objectMapper.enable(SerializationFeature.INDENT_OUTPUT);
+
+            TypeReference<List<Menu>> mapType = new TypeReference<List<Menu>>() {
+            };
+            List<Menu> jsonToMenuList = objectMapper.readValue(objectJson, mapType);
+
+            return jsonToMenuList;
+        } catch (IOException ex) {
+            return null;
+        }
+    }
+
+    public ChiNhanh parseOneChiNhanh(String objectJson) {
+        try {
+            ObjectMapper objectMapper = new ObjectMapper();
+            //Set pretty printing of json
+            objectMapper.enable(SerializationFeature.INDENT_OUTPUT);
+
+            TypeReference<ChiNhanh> mapType = new TypeReference<ChiNhanh>() {
+            };
+            ChiNhanh jsonToChiNhanhList = objectMapper.readValue(objectJson, mapType);
+
+            return jsonToChiNhanhList;
+        } catch (IOException ex) {
+            return null;
+        }
+    }
+
+    public MonAn parseOneMonAn(String objectJson) {
+        try {
+            ObjectMapper objectMapper = new ObjectMapper();
+            //Set pretty printing of json
+            objectMapper.enable(SerializationFeature.INDENT_OUTPUT);
+
+            TypeReference<MonAn> mapType = new TypeReference<MonAn>() {
+            };
+            MonAn jsonToMonAnList = objectMapper.readValue(objectJson, mapType);
+
+            return jsonToMonAnList;
         } catch (IOException ex) {
             return null;
         }

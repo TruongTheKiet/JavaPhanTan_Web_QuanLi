@@ -47,7 +47,7 @@ public class Menu extends HttpServlet {
         String name = request.getParameter("nameCategory");
         DanhMucMonAn danhmuc = new DanhMucMonAn();
         danhmuc.tenDanhMuc = name;
-        helper.pushData(url, helper.parseClassToJson(danhmuc), "PUSH");
+        helper.pushData(url, helper.parseClassToJson(danhmuc), "POST");
         
         this.doGet(request, response);
     }

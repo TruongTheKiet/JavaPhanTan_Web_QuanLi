@@ -14,7 +14,20 @@
     <definition name="AddRestaurants" extends="Page">
         <put-attribute name="_content" value="/WEB-INF/pages/restaurants_add_content.jsp"/>
     </definition>
+     <definition name="editRestaurants" extends="Page">
+        <put-attribute name="_content" value="/WEB-INF/pages/restaurants_edit_content.jsp"/>
+    </definition>
     <definition name="Menu" extends="Page">
         <put-attribute name="_content" value="/WEB-INF/pages/menu_content.jsp"/>
+    </definition>
+    
+    <definition name="Dishes" extends="Page">
+        <put-attribute name="_content" value="/WEB-INF/pages/dishes_content.jsp"/>
+    </definition>
+     <definition name="searchDishes" extends="Page">
+        <put-attribute name="_content" value="/WEB-INF/pages/dishes_search_content.jsp"/>
+    </definition>
+    <definition name="editDishes" extends="Page">
+        <put-attribute name="_content" value="/WEB-INF/pages/dishes_edit_content.jsp"/>
     </definition>
 </tiles-definitions>

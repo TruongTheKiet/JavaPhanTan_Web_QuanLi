@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee                               http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee                                                             http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
     <servlet>
         <servlet-name>Restaurants</servlet-name>
         <servlet-class>com.javateam.web_quanli.controller.Restaurants</servlet-class>
@@ -16,13 +16,34 @@
         <servlet-name>editMenu</servlet-name>
         <servlet-class>com.javateam.web_quanli.controller.editMenu</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Dishes</servlet-name>
+        <servlet-class>com.javateam.web_quanli.controller.Dishes</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>search_dishes</servlet-name>
+        <servlet-class>com.javateam.web_quanli.controller.search_dishes</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>editRestaurant</servlet-name>
+        <servlet-class>com.javateam.web_quanli.controller.editRestaurant</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>edit_Dishes</servlet-name>
+        <servlet-class>com.javateam.web_quanli.controller.edit_Dishes</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Restaurants</servlet-name>
         <url-pattern>/Restaurants</url-pattern>
+        <url-pattern/>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>addRestaurants</servlet-name>
         <url-pattern>/addRestaurants</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>editRestaurant</servlet-name>
+        <url-pattern>/editRestaurant</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>Menu</servlet-name>
@@ -31,6 +52,18 @@
     <servlet-mapping>
         <servlet-name>editMenu</servlet-name>
         <url-pattern>/editMenu</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Dishes</servlet-name>
+        <url-pattern>/Dishes</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>search_dishes</servlet-name>
+        <url-pattern>/searchDishes</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>edit_Dishes</servlet-name>
+        <url-pattern>/editDishes</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

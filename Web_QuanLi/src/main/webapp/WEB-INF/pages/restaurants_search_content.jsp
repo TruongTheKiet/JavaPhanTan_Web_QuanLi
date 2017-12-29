@@ -4,7 +4,7 @@
 <%@taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles" %>
 <div style="margin: auto;">
     <div id="searchbranch" >
-        <button type="button" class="btn btn-primary" style=" margin: auto;float: left" ><i class=" fa-lg fa fa-plus"></i>Add Branch</button>
+        <a href="addRestaurants"type="button" class="btn btn-primary" style=" margin: auto;float: left" ><i class=" fa-lg fa fa-plus"></i>Add Branch</a>
         <!--button search-->
         <div style="margin-bottom: 20px; text-align: center" class="container">
             <div class="row">
@@ -44,7 +44,7 @@
                     <td style="width: 350px" ><%=branch.getTinhThanh()%></td>
                     <td style="width: 200px" ><%=branch.getSdt()%></td>
                     <td>
-                        <a href="/Restaurans/Detail/<%=branch.getId()%>" type="button" class="btn btn-primary btn-sm"><b>Detail</b></a>
+                        <a href="/editRestaurant?id=<%=branch.getId()%>" type="button" class="btn btn-primary btn-sm"><b>Detail</b></a>
                     </td>
 
                 </tr>
