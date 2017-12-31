@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c67123c1-7106-45ac-b7bd-fc2a8e0719e9">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="96"/>
+	<property name="ireport.y" value="99"/>
 	<parameter name="date" class="java.lang.String"/>
 	<parameter name="revenue_total" class="java.lang.Integer"/>
 	<parameter name="titleDate" class="java.lang.String"/>
@@ -91,7 +91,7 @@
 				<text><![CDATA[STT]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="57" y="141" width="110" height="20" uuid="b1904392-58a2-4011-8456-b576f07e25f1"/>
+				<reportElement x="57" y="141" width="164" height="20" uuid="b1904392-58a2-4011-8456-b576f07e25f1"/>
 				<box>
 					<pen lineWidth="1.0"/>
 					<topPen lineWidth="1.0"/>
@@ -105,7 +105,7 @@
 				<text><![CDATA[TIME]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="167" y="141" width="79" height="20" uuid="26a77bf1-2dce-4952-8569-7c0935ac668f"/>
+				<reportElement x="221" y="141" width="112" height="20" uuid="26a77bf1-2dce-4952-8569-7c0935ac668f"/>
 				<box>
 					<pen lineWidth="1.0"/>
 					<topPen lineWidth="1.0"/>
@@ -116,24 +116,10 @@
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="13" isBold="true"/>
 				</textElement>
-				<text><![CDATA[ID_ORDER]]></text>
+				<text><![CDATA[TOTAL ORDER]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="246" y="141" width="131" height="20" uuid="78b1d9f9-81f5-4bca-b613-5e261293cf6e"/>
-				<box>
-					<pen lineWidth="1.0"/>
-					<topPen lineWidth="1.0"/>
-					<leftPen lineWidth="1.0"/>
-					<bottomPen lineWidth="1.0"/>
-					<rightPen lineWidth="1.0"/>
-				</box>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="13" isBold="true"/>
-				</textElement>
-				<text><![CDATA[BRANCH NAME]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="377" y="141" width="178" height="20" uuid="9cd27d80-d831-4e22-945c-d770b97a69e1"/>
+				<reportElement x="333" y="141" width="222" height="20" uuid="9cd27d80-d831-4e22-945c-d770b97a69e1"/>
 				<box>
 					<pen lineWidth="1.0"/>
 					<topPen lineWidth="1.0"/>
@@ -286,7 +272,7 @@
 				<text><![CDATA[Detail]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="532" y="59" width="33" height="20" uuid="daedb7dd-0ba8-43a4-a379-b700ab7754b5"/>
+				<reportElement x="532" y="59" width="33" height="20" uuid="52d1964f-e852-4afc-851d-531d9d79c03d"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="15" isBold="true"/>
 				</textElement>
@@ -297,19 +283,7 @@
 	<detail>
 		<band height="20" splitType="Stretch">
 			<textField>
-				<reportElement x="246" y="0" width="131" height="19" uuid="fd2a6fe0-41e2-4ca7-9754-600e09def1d5"/>
-				<box>
-					<pen lineWidth="1.0"/>
-					<topPen lineWidth="1.0"/>
-					<leftPen lineWidth="1.0"/>
-					<bottomPen lineWidth="1.0"/>
-					<rightPen lineWidth="1.0"/>
-				</box>
-				<textElement textAlignment="Center" verticalAlignment="Middle"/>
-				<textFieldExpression><![CDATA[$F{branch_name}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement x="167" y="0" width="79" height="19" uuid="70d7d14d-3575-489a-889a-35b31a6fd595"/>
+				<reportElement x="221" y="0" width="112" height="19" uuid="70d7d14d-3575-489a-889a-35b31a6fd595"/>
 				<box>
 					<pen lineWidth="1.0"/>
 					<topPen lineWidth="1.0"/>
@@ -321,7 +295,7 @@
 				<textFieldExpression><![CDATA[$F{id_order}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="377" y="0" width="178" height="19" uuid="5b482fb3-7e92-41c8-bb90-7758716cf43c"/>
+				<reportElement x="333" y="0" width="222" height="19" uuid="5b482fb3-7e92-41c8-bb90-7758716cf43c"/>
 				<box>
 					<pen lineWidth="1.0"/>
 					<topPen lineWidth="1.0"/>
@@ -333,7 +307,7 @@
 				<textFieldExpression><![CDATA[$F{total}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="57" y="0" width="110" height="19" uuid="c9ea62a5-fbd7-4742-ac32-b6fc4c621078"/>
+				<reportElement x="57" y="0" width="164" height="19" uuid="c9ea62a5-fbd7-4742-ac32-b6fc4c621078"/>
 				<box>
 					<pen lineWidth="1.0"/>
 					<topPen lineWidth="1.0"/>

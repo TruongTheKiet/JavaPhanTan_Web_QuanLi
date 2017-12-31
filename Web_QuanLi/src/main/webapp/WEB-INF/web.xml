@@ -40,6 +40,10 @@
         <servlet-name>report_revenue_week_month</servlet-name>
         <servlet-class>com.javateam.web_quanli.controller.report_revenue_week_month</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>report_revenue_year</servlet-name>
+        <servlet-class>com.javateam.web_quanli.controller.report_revenue_year</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Restaurants</servlet-name>
         <url-pattern>/Restaurants</url-pattern>
@@ -80,6 +84,10 @@
     <servlet-mapping>
         <servlet-name>report_revenue_week_month</servlet-name>
         <url-pattern>/reportRevenueWeekMonth</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>report_revenue_year</servlet-name>
+        <url-pattern>/reportRevenueYear</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

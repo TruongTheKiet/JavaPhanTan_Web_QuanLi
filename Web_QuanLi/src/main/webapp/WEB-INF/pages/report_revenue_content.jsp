@@ -27,6 +27,7 @@
 <div class="tab-content">
     <%List<ChiNhanh> listBranch = (ArrayList<ChiNhanh>) request.getAttribute("listBranch");
         String errorday = (String)request.getAttribute("errorday");
+        String errorweekmonth = (String)request.getAttribute("errorweekmonth");
     %>
     <div class="tab-pane active" id="day" role="tabpanel">
         <form style="margin-top: 50px;" class="form-horizontal" method="POST" action="reportRevenue" id="formaddbranch" onsubmit="return submitaddbranch()">
@@ -62,7 +63,7 @@
         </form>
     </div>
     <div class="tab-pane" id="week_month" role="tabpanel">
-        <form style="margin-top: 50px;" class="form-horizontal" method="POST" action="addRestaurants" id="formaddbranch" onsubmit="return submitaddbranch()">
+        <form style="margin-top: 50px;" class="form-horizontal" method="POST" action="reportRevenueWeekMonth" id="formaddbranch">
             <div class="form-group form-group-lg">
                 <label class="col-sm-2 control-label" for="day_from">Date from</label>
                 <div class="col-sm-3 ">
@@ -85,12 +86,20 @@
                     </select>
                 </div>
             </div>
-            <div class="col-sm-4">
+            <div class="form-group form-group-lg">    
+                <div class="col-sm-2 "></div>
+                <div class="col-sm-3 ">
+                    <label class=" <%=errorweekmonth%> col-sm-9 control-label" style="color: red">Data not exist</label>
+                </div>
             </div>
-            <div class="col-sm-4">
-                <button type="submit" class="form-control btn btn-primary" style="color: #ffffff; background: #0976b4">
-                    Export 
-                </button>
+            <div class="form-group form-group-lg">
+                <div class="col-sm-4">
+                </div>
+                <div class="col-sm-4">
+                    <button type="submit" class="form-control btn btn-primary" style="color: #ffffff; background: #0976b4">
+                        Export 
+                    </button>
+                </div>
             </div>
 
         </form>
