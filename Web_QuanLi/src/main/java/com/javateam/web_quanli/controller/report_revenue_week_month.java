@@ -84,6 +84,7 @@ public class report_revenue_week_month extends HttpServlet {
             request.setAttribute("page", "Revenue");
             request.setAttribute("title", "Revenue Report");
             request.setAttribute("activeRevenue", "active");
+            request.setAttribute("erroryear", "hidden");
             request.setAttribute("errorday", "hidden");
             request.setAttribute("errorweekmonth", "show");
             String url_return = this.defaultUrl + "/getAllChiNhanh";

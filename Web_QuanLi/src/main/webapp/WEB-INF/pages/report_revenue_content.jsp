@@ -28,6 +28,7 @@
     <%List<ChiNhanh> listBranch = (ArrayList<ChiNhanh>) request.getAttribute("listBranch");
         String errorday = (String)request.getAttribute("errorday");
         String errorweekmonth = (String)request.getAttribute("errorweekmonth");
+        String erroryear = (String)request.getAttribute("erroryear");
     %>
     <div class="tab-pane active" id="day" role="tabpanel">
         <form style="margin-top: 50px;" class="form-horizontal" method="POST" action="reportRevenue" id="formaddbranch" onsubmit="return submitaddbranch()">
@@ -105,11 +106,11 @@
         </form>
     </div>
     <div class="tab-pane" id="quaterly" role="tabpanel">
-        <form style="margin-top: 50px;" class="form-horizontal" method="POST" action="addRestaurants" id="formaddbranch" onsubmit="return submitaddbranch()">
+        <form style="margin-top: 50px;" class="form-horizontal" method="POST" action="reportRevenueQuarterly" id="formaddbranch" onsubmit="return submitaddbranch()">
             <div class="form-group form-group-lg">
                 <label class="col-sm-1 control-label" for="day"> Week</label>
                 <div class="col-sm-2">
-                    <select id="categorydishes" name="categorydishes"  type="text" class="form-control" >
+                    <select id="quarterly" name="quarterly"  type="text" class="form-control" >
                         <option value="1"> Quarterly 1</option>
                         <option value="2"> Quarterly 2</option>
                         <option value="3"> Quarterly 3</option>
@@ -117,18 +118,22 @@
                     </select>
                 </div>
 
-                <label class="col-sm-1 control-label" for="categorydishes">Year</label>
+                <label class="col-sm-1 control-label" for="year_quarterly">Year</label>
                 <div class="col-sm-2">
-                    <select id="categorydishes" name="categorydishes"  type="text" class="form-control" >
+                    <select id="year_quarterly" name="year_quarterly"  type="text" class="form-control" >
                         <option value="2016">2016</option>
                         <option value="2017">2017</option>
                     </select>
                 </div>
                 <label class="col-sm-1 control-label" for="day">Type</label>
                 <div class="col-sm-3">
-                    <select id="categorydishes" name="categorydishes"  type="text" class="form-control" >
-                        <option value="1"> All</option>
-                        <option value="2"> Group by branch</option>
+                    <select id="id_branch" name="id_branch"  type="text" class="form-control" >
+                        <option value="-1"> All</option>
+                        <%for(int i = 0 ; i < listBranch.size(); i++){
+                            ChiNhanh branch = listBranch.get(i);
+                        %>
+                        <option value="<%=branch.getId()%>"><%=branch.getTen()%></option>
+                        <%}%>
                     </select>
                 </div>
                 <div class="col-sm-2">
@@ -141,22 +146,26 @@
         </form>
     </div>
     <div class="tab-pane" id="year" role="tabpanel">
-        <form style="margin-top: 50px;" class="form-horizontal" method="POST" action="addRestaurants" id="formaddbranch" onsubmit="return submitaddbranch()">
+        <form style="margin-top: 50px;" class="form-horizontal" method="POST" action="reportRevenueYear"  >
             <div class="form-group form-group-lg">
 
 
                 <label class="col-sm-2 control-label" for="categorydishes">Year</label>
                 <div class="col-sm-3">
-                    <select id="categorydishes" name="categorydishes"  type="text" class="form-control" >
+                    <select id="year_post" name="year_post"  type="text" class="form-control" >
                         <option value="2016">2016</option>
                         <option value="2017">2017</option>
                     </select>
                 </div>
                 <label class="col-sm-2 control-label" for="day">Type</label>
                 <div class="col-sm-3">
-                    <select id="categorydishes" name="categorydishes"  type="text" class="form-control" >
-                        <option value="1"> All</option>
-                        <option value="2"> Group by branch</option>
+                    <select id="id_branch" name="id_branch"  type="text" class="form-control" >
+                        <option value="-1"> All</option>
+                        <%for(int i = 0 ; i < listBranch.size(); i++){
+                            ChiNhanh branch = listBranch.get(i);
+                        %>
+                        <option value="<%=branch.getId()%>"><%=branch.getTen()%></option>
+                        <%}%>
                     </select>
                 </div>
                 <div class="col-sm-2">
@@ -165,7 +174,12 @@
                     </button>
                 </div>
             </div>
-
+            <div class="form-group form-group-lg">    
+                <div class="col-sm-2 "></div>
+                <div class="col-sm-3 ">
+                    <label class=" <%=erroryear%> col-sm-9 control-label" style="color: red">Data not exist</label>
+                </div>
+            </div>
         </form>
     </div>
 

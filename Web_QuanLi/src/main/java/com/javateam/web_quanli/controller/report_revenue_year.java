@@ -43,6 +43,7 @@ public class report_revenue_year extends HttpServlet {
     private String defaultUrl = "http://localhost:8080/RestAPI_QuanLi";
     private int id_branch;
     private String date_from, date_to;
+    private String year;
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -54,8 +55,9 @@ public class report_revenue_year extends HttpServlet {
             throws ServletException, IOException {
 
         id_branch = Integer.parseInt(request.getParameter("id_branch"));
-        date_to = request.getParameter("day_to");;
-        date_from = request.getParameter("day_from");;
+        year = request.getParameter("year_post");
+        date_to = year + "-12-31";
+        date_from =  year + "-01-01";
 
         switch (id_branch) {
             case -1:
@@ -74,7 +76,7 @@ public class report_revenue_year extends HttpServlet {
 
     private void DoanhThuDayAll(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         String branch_report = "";
-        String url = this.defaultUrl + "/getDoanhThuTuanThang";
+        String url = this.defaultUrl + "/getDoanhThuNam";
         String data = "{\"id_branch\":" + id_branch + ",\"date_from\":\"" + date_from + "\",\"date_to\":\"" + date_to + "\"}";
         String ObjecJSON = helper.pushData(url, data, "POST");
         List<DoanhThuDay> list = helper.parseDoanhThuDay(ObjecJSON);
@@ -84,8 +86,9 @@ public class report_revenue_year extends HttpServlet {
             request.setAttribute("page", "Revenue");
             request.setAttribute("title", "Revenue Report");
             request.setAttribute("activeRevenue", "active");
+            request.setAttribute("erroryear", "show");
             request.setAttribute("errorday", "hidden");
-            request.setAttribute("errorweekmonth", "show");
+            request.setAttribute("errorweekmonth", "hidden");
             String url_return = this.defaultUrl + "/getAllChiNhanh";
             String objectJSON = helper.getData(url_return);
             List<ChiNhanh> listBranch = helper.parseChiNhanh(objectJSON);
@@ -162,8 +165,8 @@ public class report_revenue_year extends HttpServlet {
 
         Map<String, Object> item = new HashMap<String, Object>();
         item.put("revenue_total", total_revenue);
-        item.put("date", date_from + " to " + date_to);
-        item.put("titleDate", "Date :");
+        item.put("date", year);
+        item.put("titleDate", "Year :");
         item.put("total_order", total_order);
         item.put("atstore", atstore);
         item.put("takeaway", takeaway);

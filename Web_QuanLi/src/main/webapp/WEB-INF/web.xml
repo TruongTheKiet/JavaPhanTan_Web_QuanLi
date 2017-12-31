@@ -44,6 +44,10 @@
         <servlet-name>report_revenue_year</servlet-name>
         <servlet-class>com.javateam.web_quanli.controller.report_revenue_year</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>report_revenue_quarterly</servlet-name>
+        <servlet-class>com.javateam.web_quanli.controller.report_revenue_quarterly</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Restaurants</servlet-name>
         <url-pattern>/Restaurants</url-pattern>
@@ -88,6 +92,10 @@
     <servlet-mapping>
         <servlet-name>report_revenue_year</servlet-name>
         <url-pattern>/reportRevenueYear</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>report_revenue_quarterly</servlet-name>
+        <url-pattern>/reportRevenueQuarterly</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
