@@ -30,4 +30,8 @@
     <definition name="editDishes" extends="Page">
         <put-attribute name="_content" value="/WEB-INF/pages/dishes_edit_content.jsp"/>
     </definition>
+    <!--Report-->
+    <definition name="Revenue" extends="Page">
+        <put-attribute name="_content" value="/WEB-INF/pages/report_revenue_content.jsp"/>
+    </definition>
 </tiles-definitions>

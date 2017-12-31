@@ -11,6 +11,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.javateam.web_quanli.model.ChiNhanh;
 import com.javateam.web_quanli.model.DanhMucMonAn;
+import com.javateam.web_quanli.model.DoanhThuDay;
 import com.javateam.web_quanli.model.Menu;
 import com.javateam.web_quanli.model.MonAn;
 import java.io.BufferedReader;
@@ -162,6 +163,22 @@ public class Helper {
         }
     }
 
+    public List<DoanhThuDay> parseDoanhThuDay(String objectJson) {
+        try {
+            ObjectMapper objectMapper = new ObjectMapper();
+            //Set pretty printing of json
+            objectMapper.enable(SerializationFeature.INDENT_OUTPUT);
+
+            TypeReference<List<DoanhThuDay>> mapType = new TypeReference<List<DoanhThuDay>>() {
+            };
+            List<DoanhThuDay> jsonToMenuList = objectMapper.readValue(objectJson, mapType);
+
+            return jsonToMenuList;
+        } catch (IOException ex) {
+            return null;
+        }
+    }
+    
     public ChiNhanh parseOneChiNhanh(String objectJson) {
         try {
             ObjectMapper objectMapper = new ObjectMapper();

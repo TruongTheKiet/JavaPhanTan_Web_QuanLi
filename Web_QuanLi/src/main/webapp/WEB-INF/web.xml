@@ -32,6 +32,10 @@
         <servlet-name>edit_Dishes</servlet-name>
         <servlet-class>com.javateam.web_quanli.controller.edit_Dishes</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>report_revenue</servlet-name>
+        <servlet-class>com.javateam.web_quanli.controller.report_revenue</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Restaurants</servlet-name>
         <url-pattern>/Restaurants</url-pattern>
@@ -64,6 +68,10 @@
     <servlet-mapping>
         <servlet-name>edit_Dishes</servlet-name>
         <url-pattern>/editDishes</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>report_revenue</servlet-name>
+        <url-pattern>/reportRevenue</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

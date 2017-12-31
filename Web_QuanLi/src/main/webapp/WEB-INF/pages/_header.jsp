@@ -31,7 +31,7 @@
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
     <link href="../resources/assets/css/pe-icon-7-stroke.css" rel="stylesheet" />
 
-    
+    <link href="../resources/assets/css/datepicker.css" rel="stylesheet" />
     <!--my css-->
     <link href="../resources/cssFile.css" rel="stylesheet" />
 

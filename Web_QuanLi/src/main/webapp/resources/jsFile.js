@@ -74,6 +74,8 @@ $("#updateRestaurant").click(function () {
     $("#menuadd").val(listAdd.toString());
     $("#menudelete").val(listDelete.toString());
 });
+//
+//$('.date').click(function () {$('.date').datepicker();})
 
 //
 //$(document).ready(function () {

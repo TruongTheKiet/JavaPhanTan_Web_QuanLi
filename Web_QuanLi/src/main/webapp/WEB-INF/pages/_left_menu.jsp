@@ -38,10 +38,35 @@
                     <p>Dishes</p>
                 </a>
             </li>
+            <li class="${activeRevenue}">
+                <a href="reportRevenue">
+                    <img class="tab-icon" src="resources/assets/img/icon_revenue.png"/>
+                    <p>Revenue Reports</p>
+                </a>
+            </li>
+            
+            <li class="${activeReport}">
+                <a href="reports">
+                    <img class="tab-icon" src="resources/assets/img/icon_order.png"/>
+                    <p>Amount Order Reports</p>
+                </a>
+            </li>
+            <li class="${activeReport}">
+                <a href="reports">
+                    <img class="tab-icon" src="resources/assets/img/icon_cost.png"/>
+                    <p>Cost Reports</p>
+                </a>
+            </li>
             <li class="${activeReport}">
                 <a href="reports">
                     <img class="tab-icon" src="resources/assets/img/icon_reports.png"/>
-                    <p>Reports</p>
+                    <p>Dishes Reports</p>
+                </a>
+            </li>
+            <li class="${activeReport}">
+                <a href="reports">
+                    <img class="tab-icon" src="resources/assets/img/icon_report2.png"/>
+                    <p>Customer Reports</p>
                 </a>
             </li>
         </ul>

@@ -149,6 +149,14 @@
             <artifactId>json</artifactId>
             <version>20171018</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/net.sf.jasperreports/jasperreports -->
+        <dependency>
+            <groupId>net.sf.jasperreports</groupId>
+            <artifactId>jasperreports</artifactId>
+            <version>5.5.0</version>
+        </dependency>
+
+
     </dependencies>
 
     <build>
