@@ -12,31 +12,55 @@ import java.io.Serializable;
  * @author TheKiet
  */
 public class DoanhThuDay implements Serializable{
-    public int index;
+    public int stt;
     public int id_order;
     public String time;
     public String branch_name;
     public int total;
+    
+    public int type_order;
 
-    public DoanhThuDay(int id_order, String time, String branch_name, int total) {
+    public int getType_order() {
+        return type_order;
+    }
+
+    public void setType_order(int type_order) {
+        this.type_order = type_order;
+    }
+    
+    public DoanhThuDay(int stt, int id_order, String time, String branch_name, int total, int type_order) {
+        this.stt = stt;
+        this.id_order = id_order;
+        this.time = time;
+        this.branch_name = branch_name;
+        this.total = total;
+        this.type_order = type_order;
+    }
+
+
+    
+    public DoanhThuDay() {
+    }
+
+    
+    public DoanhThuDay(int stt, int id_order, String time, String branch_name, int total) {
+        this.stt = stt;
         this.id_order = id_order;
         this.time = time;
         this.branch_name = branch_name;
         this.total = total;
     }
 
-   
-
-    public DoanhThuDay() {
+    
+    public int getStt() {
+        return stt;
     }
 
-    public int getIndex() {
-        return index;
+    public void setStt(int stt) {
+        this.stt = stt;
     }
-
-    public void setIndex(int index) {
-        this.index = index;
-    }
+    
+    
 
     public int getId_order() {
         return id_order;

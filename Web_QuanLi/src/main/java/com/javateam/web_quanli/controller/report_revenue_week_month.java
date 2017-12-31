@@ -6,9 +6,7 @@
 package com.javateam.web_quanli.controller;
 
 import com.javateam.web_quanli.model.ChiNhanh;
-import com.javateam.web_quanli.model.DanhMucMonAn;
 import com.javateam.web_quanli.model.DoanhThuDay;
-import com.javateam.web_quanli.model.MonAn;
 import com.javateam.web_quanli.service.Helper;
 import java.io.BufferedInputStream;
 import java.io.ByteArrayOutputStream;
@@ -17,7 +15,6 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -40,35 +37,23 @@ import net.sf.jasperreports.engine.util.JRLoader;
  *
  * @author TheKiet
  */
-public class report_revenue extends HttpServlet {
-
-    Helper helper = new Helper();
+public class report_revenue_week_month extends HttpServlet {
+    
+     Helper helper = new Helper();
     private String defaultUrl = "http://localhost:8080/RestAPI_QuanLi";
     private String date_order;
     private int id_branch;
     private String date_from, date_to;
-
+    
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        request.setAttribute("page", "Revenue");
-        request.setAttribute("title", "Revenue Report");
-        request.setAttribute("activeRevenue", "active");
-
-        request.setAttribute("errorday", "hidden");
-        String url = this.defaultUrl + "/getAllChiNhanh";
-        String objectJSON = helper.getData(url);
-        List<ChiNhanh> listBranch = helper.parseChiNhanh(objectJSON);
-        request.setAttribute("listBranch", listBranch);
-        String view = "/WEB-INF/index.jsp";
-        RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(view);
-        dispatcher.forward(request, response);
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        date_order = request.getParameter("day");
+         date_order = request.getParameter("day");
         id_branch = Integer.parseInt(request.getParameter("id_branch"));
         if (date_order.compareTo("") != 0) {
             date_to = date_order;
@@ -88,8 +73,7 @@ public class report_revenue extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
-
-    private void DoanhThuDayAll(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+     private void DoanhThuDayAll(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         String branch_report = "";
         String url = this.defaultUrl + "/getDoanhThuNgay";
         String data = "{\"id_branch\":" + id_branch + ",\"date_from\":\"" + date_from + "\",\"date_to\":\"" + date_to + "\"}";
@@ -198,4 +182,5 @@ public class report_revenue extends HttpServlet {
             baos.close();
         }
     }
+
 }
