@@ -10,10 +10,15 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.javateam.web_quanli.model.ChiNhanh;
+import com.javateam.web_quanli.model.ChiPhi;
 import com.javateam.web_quanli.model.DanhMucMonAn;
 import com.javateam.web_quanli.model.DoanhThuDay;
+import com.javateam.web_quanli.model.DonHang;
+import com.javateam.web_quanli.model.HoatDong;
+import com.javateam.web_quanli.model.KhachHangMoi;
 import com.javateam.web_quanli.model.Menu;
 import com.javateam.web_quanli.model.MonAn;
+import com.javateam.web_quanli.model.MonAnThang;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -178,7 +183,87 @@ public class Helper {
             return null;
         }
     }
+
+    public List<KhachHangMoi> parseKhachHangMoi(String objectJson) {
+        try {
+            ObjectMapper objectMapper = new ObjectMapper();
+            //Set pretty printing of json
+            objectMapper.enable(SerializationFeature.INDENT_OUTPUT);
+
+            TypeReference<List<KhachHangMoi>> mapType = new TypeReference<List<KhachHangMoi>>() {
+            };
+            List<KhachHangMoi> jsonToMenuList = objectMapper.readValue(objectJson, mapType);
+
+            return jsonToMenuList;
+        } catch (IOException ex) {
+            return null;
+        }
+    }
+
+    public List<HoatDong> parseHoatDong(String objectJson) {
+        try {
+            ObjectMapper objectMapper = new ObjectMapper();
+            //Set pretty printing of json
+            objectMapper.enable(SerializationFeature.INDENT_OUTPUT);
+
+            TypeReference<List<HoatDong>> mapType = new TypeReference<List<HoatDong>>() {
+            };
+            List<HoatDong> jsonToMenuList = objectMapper.readValue(objectJson, mapType);
+
+            return jsonToMenuList;
+        } catch (IOException ex) {
+            return null;
+        }
+    }
+
+    public List<MonAnThang> parseMonAnThang(String objectJson) {
+        try {
+            ObjectMapper objectMapper = new ObjectMapper();
+            //Set pretty printing of json
+            objectMapper.enable(SerializationFeature.INDENT_OUTPUT);
+
+            TypeReference<List<MonAnThang>> mapType = new TypeReference<List<MonAnThang>>() {
+            };
+            List<MonAnThang> jsonToMenuList = objectMapper.readValue(objectJson, mapType);
+
+            return jsonToMenuList;
+        } catch (IOException ex) {
+            return null;
+        }
+    }
+
+    public List<ChiPhi> parseChiPhi(String objectJson) {
+        try {
+            ObjectMapper objectMapper = new ObjectMapper();
+            //Set pretty printing of json
+            objectMapper.enable(SerializationFeature.INDENT_OUTPUT);
+
+            TypeReference<List<ChiPhi>> mapType = new TypeReference<List<ChiPhi>>() {
+            };
+            List<ChiPhi> jsonToMenuList = objectMapper.readValue(objectJson, mapType);
+
+            return jsonToMenuList;
+        } catch (IOException ex) {
+            return null;
+        }
+    }
     
+     public List<DonHang> parseDonHanf(String objectJson) {
+        try {
+            ObjectMapper objectMapper = new ObjectMapper();
+            //Set pretty printing of json
+            objectMapper.enable(SerializationFeature.INDENT_OUTPUT);
+
+            TypeReference<List<DonHang>> mapType = new TypeReference<List<DonHang>>() {
+            };
+            List<DonHang> jsonToMenuList = objectMapper.readValue(objectJson, mapType);
+
+            return jsonToMenuList;
+        } catch (IOException ex) {
+            return null;
+        }
+    }
+
     public ChiNhanh parseOneChiNhanh(String objectJson) {
         try {
             ObjectMapper objectMapper = new ObjectMapper();

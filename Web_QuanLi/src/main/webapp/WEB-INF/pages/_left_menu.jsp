@@ -51,20 +51,20 @@
                     <p>Amount Order Reports</p>
                 </a>
             </li>
-            <li class="${activeReport}">
-                <a href="reports">
+            <li class="${activerReportCost}">
+                <a href="reportCost">
                     <img class="tab-icon" src="resources/assets/img/icon_cost.png"/>
                     <p>Cost Reports</p>
                 </a>
             </li>
-            <li class="${activeReport}">
-                <a href="reports">
+            <li class="${activerReportDishes}">
+                <a href="reportDishes">
                     <img class="tab-icon" src="resources/assets/img/icon_reports.png"/>
                     <p>Dishes Reports</p>
                 </a>
             </li>
-            <li class="${activeReport}">
-                <a href="reports">
+            <li class="${activeNewCustom}">
+                <a href="reportNewCustomer">
                     <img class="tab-icon" src="resources/assets/img/icon_report2.png"/>
                     <p>Customer Reports</p>
                 </a>

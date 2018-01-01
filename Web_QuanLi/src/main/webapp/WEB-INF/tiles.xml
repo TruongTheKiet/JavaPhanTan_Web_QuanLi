@@ -34,4 +34,14 @@
     <definition name="Revenue" extends="Page">
         <put-attribute name="_content" value="/WEB-INF/pages/report_revenue_content.jsp"/>
     </definition>
+    <definition name="NewCustomer" extends="Page">
+        <put-attribute name="_content" value="/WEB-INF/pages/report_newcustomer_content.jsp"/>
+    </definition>
+    
+    <definition name="reportDishes" extends="Page">
+        <put-attribute name="_content" value="/WEB-INF/pages/report_dishes_content.jsp"/>
+    </definition>
+     <definition name="reportCost" extends="Page">
+        <put-attribute name="_content" value="/WEB-INF/pages/report_cost_content.jsp"/>
+    </definition>
 </tiles-definitions>

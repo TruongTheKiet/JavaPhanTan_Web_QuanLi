@@ -48,6 +48,34 @@
         <servlet-name>report_revenue_quarterly</servlet-name>
         <servlet-class>com.javateam.web_quanli.controller.report_revenue_quarterly</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>report_new_customer</servlet-name>
+        <servlet-class>com.javateam.web_quanli.controller.report_new_customer</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>report_activity_customer</servlet-name>
+        <servlet-class>com.javateam.web_quanli.controller.report_activity_customer</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>report_dishes</servlet-name>
+        <servlet-class>com.javateam.web_quanli.controller.report_dishes</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>report_cost</servlet-name>
+        <servlet-class>com.javateam.web_quanli.controller.report_cost</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>report_cost_week_month</servlet-name>
+        <servlet-class>com.javateam.web_quanli.controller.report_cost_week_month</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>report_cost_year</servlet-name>
+        <servlet-class>com.javateam.web_quanli.controller.report_cost_year</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>report_cost_quarterly</servlet-name>
+        <servlet-class>com.javateam.web_quanli.controller.report_cost_quarterly</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Restaurants</servlet-name>
         <url-pattern>/Restaurants</url-pattern>
@@ -96,6 +124,34 @@
     <servlet-mapping>
         <servlet-name>report_revenue_quarterly</servlet-name>
         <url-pattern>/reportRevenueQuarterly</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>report_new_customer</servlet-name>
+        <url-pattern>/reportNewCustomer</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>report_activity_customer</servlet-name>
+        <url-pattern>/reportActivityCustomer</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>report_dishes</servlet-name>
+        <url-pattern>/reportDishes</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>report_cost</servlet-name>
+        <url-pattern>/reportCost</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>report_cost_week_month</servlet-name>
+        <url-pattern>/reportCostWeekMonth</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>report_cost_year</servlet-name>
+        <url-pattern>/reportCostYear</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>report_cost_quarterly</servlet-name>
+        <url-pattern>/reportCostQuarterly</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

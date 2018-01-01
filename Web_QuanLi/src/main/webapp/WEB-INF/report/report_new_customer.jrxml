@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c67123c1-7106-45ac-b7bd-fc2a8e0719e9">
+	<property name="ireport.zoom" value="0.9090909090909092"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="195"/>
+	<subDataset name="newcustomer" uuid="5cbd534f-0384-4a7d-b34f-30f4f8a4832d">
+		<field name="thang" class="java.lang.String"/>
+		<field name="soluong" class="java.lang.Integer"/>
+	</subDataset>
+	<parameter name="date" class="java.lang.String"/>
+	<parameter name="titleDate" class="java.lang.String"/>
+	<parameter name="total_customer" class="java.lang.Integer"/>
+	<field name="data" class="java.util.List"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="12" width="555" height="55" backcolor="#003399" uuid="facb7551-a148-4db2-817f-ddc6f4d9d8ce"/>
+			</rectangle>
+			<elementGroup>
+				<staticText>
+					<reportElement x="138" y="20" width="278" height="38" forecolor="#FFFFFF" uuid="0a1c2333-b898-4959-b65d-932b58363825"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="24" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Report New Customer]]></text>
+				</staticText>
+			</elementGroup>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="31" splitType="Stretch">
+			<textField>
+				<reportElement x="232" y="0" width="273" height="20" uuid="dafa043e-8221-40ad-b9be-9b8e423e6263"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="15" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="156" y="0" width="65" height="20" uuid="c4ea8f1a-2e87-4f1b-a0ba-7ec967caf2cb"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{titleDate}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="417">
+			<staticText>
+				<reportElement x="238" y="0" width="178" height="20" uuid="1dddb293-ee19-4c57-a228-001e14eefcbd"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TOTAL CUSTOMER]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="95" y="0" width="143" height="20" uuid="a3089285-3af9-4861-8adb-db407277dd1d"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Year]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="238" y="20" width="178" height="20" uuid="5c7fa98a-2eb1-4c4a-aedc-4f2ef110d4ff"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{total_customer}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="95" y="20" width="143" height="20" uuid="03033781-97d5-4111-93e0-f5b07c465790"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{date}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="223" y="40" width="109" height="46" forecolor="#000099" uuid="54f29e8c-bbc3-4eb8-bdf6-3f8ab07fe724"/>
+				<textElement>
+					<font size="30"/>
+				</textElement>
+				<text><![CDATA[CHART]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="34" y="80" width="78" height="20" uuid="21239300-9b46-4241-96d0-000a13087a2f"/>
+				<textElement verticalAlignment="Bottom"/>
+				<text><![CDATA[new customer]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="505" y="321" width="37" height="20" uuid="7d20499e-eaae-4dbf-ac16-eebd1bd590ff"/>
+				<text><![CDATA[month]]></text>
+			</staticText>
+			<barChart>
+				<chart>
+					<reportElement x="45" y="100" width="460" height="277" uuid="0e58ec32-cbdc-4ec1-b641-bd3bac28343a"/>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<categoryDataset>
+					<dataset>
+						<datasetRun subDataset="newcustomer" uuid="cfd65fac-49da-466e-a027-059b0911bbfd">
+							<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{data})]]></dataSourceExpression>
+						</datasetRun>
+					</dataset>
+					<categorySeries>
+						<seriesExpression><![CDATA["New Customer"]]></seriesExpression>
+						<categoryExpression><![CDATA[$F{thang}]]></categoryExpression>
+						<valueExpression><![CDATA[$F{soluong}]]></valueExpression>
+					</categorySeries>
+				</categoryDataset>
+				<barPlot>
+					<plot/>
+					<itemLabel/>
+					<categoryAxisFormat>
+						<axisFormat/>
+					</categoryAxisFormat>
+					<valueAxisFormat>
+						<axisFormat/>
+					</valueAxisFormat>
+				</barPlot>
+			</barChart>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="50"/>
+	</detail>
+	<columnFooter>
+		<band height="40" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
