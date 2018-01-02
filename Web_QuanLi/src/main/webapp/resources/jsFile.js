@@ -51,11 +51,11 @@ $('.updatecheckboxchoose').click(function () {
                 exist = true;
             }
         }
-        if(exist != true){
-             listAdd.push($(this).val());
+        if (exist != true) {
+            listAdd.push($(this).val());
         }
     } else {
-         var existadd = false;
+        var existadd = false;
         for (var i = 0; i < listAdd.length; i++) {
             if (Number(listAdd[i]) == Number($(this).val()))
             {
@@ -63,7 +63,7 @@ $('.updatecheckboxchoose').click(function () {
                 existadd = true;
             }
         }
-        if(exist !=  true){
+        if (exist != true) {
             listDelete.push($(this).val());
         }
     }
@@ -76,10 +76,13 @@ $("#updateRestaurant").click(function () {
 });
 
 
-$('.day').datepicker();
 
-//
-//$(document).ready(function () {
+$(document).ready(function () {
+    $("#logout").click(function () {
+        $("#form-logout").submit();
+    });
+
+})
 //    $(document).on('change', '.btn-file :file', function () {
 //        var input = $(this),
 //                label = input.val().replace(/\\/g, '/').replace(/.*\//, '');

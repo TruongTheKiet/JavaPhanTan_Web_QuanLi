@@ -25,8 +25,8 @@
                 <form class="hidden" method="post" action="/logout" id="form-logout">
                     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
                 </form>
-                <li class="navbar-logout-btn">
-                    <a href="#">
+                <li class="navbar-logout-btn" >
+                    <a href="#" id = "logout">
                         <p><i class="fa fa-sign-out" aria-hidden="true"></i> Log out</p>
                     </a>
                 </li>
