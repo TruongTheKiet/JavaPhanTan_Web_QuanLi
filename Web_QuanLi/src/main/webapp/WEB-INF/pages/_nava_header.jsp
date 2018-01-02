@@ -19,25 +19,12 @@
             <ul class="nav navbar-nav navbar-right">
                 <li class="navbar-text-override">
                     <a href="">
-                        <p><i class="fa fa-user" aria-hidden="true"></i> Account</p>
+                        <p><i class="fa fa-user" aria-hidden="true"></i> ${userDetails.username}</p>
                     </a>
                 </li>
-                <li class="dropdown navbar-text-override">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        <p>
-                        <p><i class="fa fa-wrench" aria-hidden="true"></i> Actions
-                            <b class="caret"></b>
-                        </p>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Action 1</a></li>
-                        <li><a href="#">Action 2</a></li>
-                        <li><a href="#">Action 3</a></li>
-                        <li><a href="#">Action 4</a></li>
-                        <li class="divider"></li>
-                        <li><a href="#">Action 5</a></li>
-                    </ul>
-                </li>
+                <form class="hidden" method="post" action="/logout" id="form-logout">
+                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+                </form>
                 <li class="navbar-logout-btn">
                     <a href="#">
                         <p><i class="fa fa-sign-out" aria-hidden="true"></i> Log out</p>

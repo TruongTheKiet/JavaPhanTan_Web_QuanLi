@@ -16,6 +16,8 @@
         <org.slf4j.version>1.5.8</org.slf4j.version>
         <javax.jstl.version>1.2</javax.jstl.version>
         <org.springframework.version>4.2.2.RELEASE</org.springframework.version>
+        <spring.security.version>4.0.4.RELEASE</spring.security.version>
+        <mysql.connector.version>5.1.30</mysql.connector.version>
     </properties>
     
     <dependencies>
@@ -160,7 +162,27 @@
             <artifactId>commons-collections</artifactId>
             <version>3.2.2</version>
         </dependency>
+        
+        <!-- Spring Security -->
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-web</artifactId>
+            <version>4.0.4.RELEASE</version>
+        </dependency>
+ 
+        <!-- http://mvnrepository.com/artifact/org.springframework.security/spring-security-config -->
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-config</artifactId>
+            <version>4.0.4.RELEASE</version>
+        </dependency>
 
+        <!-- connect to mysql -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql.connector.version}</version>
+        </dependency>
     </dependencies>
 
     <build>
