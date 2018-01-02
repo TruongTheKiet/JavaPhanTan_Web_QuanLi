@@ -52,7 +52,7 @@ public class report_new_customer extends HttpServlet {
         request.setAttribute("title", "New Customer");
         request.setAttribute("errornewcustomer", "hidden");
         request.setAttribute("erroractivity", "hidden");
-        request.setAttribute("activeDishes", "activeNewCustom");
+        request.setAttribute("activeNewCustom", "active");
         String view = "/WEB-INF/index.jsp";
         RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(view);
         dispatcher.forward(request, response);
@@ -70,7 +70,7 @@ public class report_new_customer extends HttpServlet {
         if (list.size() == 0 || list == null) {
             request.setAttribute("page", "NewCustomer");
             request.setAttribute("title", "New Customer");
-            request.setAttribute("activeDishes", "activeNewCustom");
+        request.setAttribute("activeNewCustom", "active");
 
             request.setAttribute("errornewcustomer", "show");
             request.setAttribute("erroractivity", "hidden");

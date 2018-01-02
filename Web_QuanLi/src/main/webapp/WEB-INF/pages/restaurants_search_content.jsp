@@ -13,10 +13,11 @@
                         <div class="input-append">
                             <div class="form-group">
                                 <label style="margin-right: 20px" for="branchSearch" >Name Branch</label>
-                                <input style="width: 450px" type="text" class="form-control" id='branchSearch' name='branchSearch' placeholder="Name branch">
+                                <input required="true" style="width: 450px" type="text" class="form-control" id='branchSearch' name='branchSearch' placeholder="Name branch">
                             </div>
                             <button type="submit" class="btn">Search</button>
                         </div>
+                        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/> 
                     </form>
                 </div>
 

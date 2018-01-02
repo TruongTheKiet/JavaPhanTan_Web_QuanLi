@@ -36,7 +36,7 @@
             <div class="form-group form-group-lg">
                 <label class="col-sm-2 control-label" for="day"> Day</label>
                 <div class="col-sm-3 ">
-                    <input id="day" name="day" required="true" class=" day form-control" type="text"  placeholder="dd-mm-yyyy">
+                    <input  maxlength="10" id="day" name="day" required="true" class=" day form-control" type="text"  placeholder="YYYY-MM-DD">
                 </div>
 
                 <label class="col-sm-2 control-label" for="id_branch">Type</label>
@@ -62,6 +62,8 @@
                     <label class=" <%=errorday%> col-sm-9 control-label" style="color: red">Data not exist</label>
                 </div>
             </div>
+            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/> 
+
         </form>
     </div>
     <div class="tab-pane" id="week_month" role="tabpanel">
@@ -69,11 +71,11 @@
             <div class="form-group form-group-lg">
                 <label class="col-sm-2 control-label" for="day_from">Date from</label>
                 <div class="col-sm-3 ">
-                    <input id="day_from" name="day_from" required="true" class=" day form-control" type="text"  placeholder="dd-mm-yyyy">
+                    <input maxlength="10" id="day_from" name="day_from" required="true" class=" day form-control" type="text"  placeholder="YYYY-MM-DD">
                 </div>
                 <label class="col-sm-1 control-label" for="day_to">Date to</label>
                 <div class="col-sm-3 ">
-                    <input id="day_to" name="day_to" required="true" class=" day form-control" type="text"  placeholder="dd-mm-yyyy">
+                    <input maxlength="10" id="day_to" name="day_to" required="true" class=" day form-control" type="text"  placeholder="YYYY-MM-DD">
                 </div>
 
                 <label class="col-sm-1 control-label" for="day">Type</label>
@@ -103,6 +105,7 @@
                     </button>
                 </div>
             </div>
+            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/> 
 
         </form>
     </div>
@@ -143,6 +146,7 @@
                     </button>
                 </div>
             </div>
+            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/> 
 
         </form>
     </div>
@@ -181,6 +185,8 @@
                     <label class=" <%=erroryear%> col-sm-9 control-label" style="color: red">Data not exist</label>
                 </div>
             </div>
+            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/> 
+
         </form>
     </div>
 

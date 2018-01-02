@@ -26,7 +26,7 @@
         <div class="form-group form-group-lg">
             <label class="col-sm-2 control-label" for="phonebranch">Phone</label>
             <div class="col-sm-8 ">
-                <input id="phonebranch" name="phonebranch" required="true" class="form-control" type="text"  placeholder="Branch Phone">
+                <input id="phonebranch" name="phonebranch" required="true" class="form-control" type="number"  placeholder="Branch Phone">
             </div>
         </div>
 
@@ -40,7 +40,7 @@
         <div class="form-group form-group-lg">
             <label class="col-sm-2 control-label" for="tablebranch">Amount Table</label>
             <div class="col-sm-8 ">
-                <input id="tablebranch" name="tablebranch" required="true" class="form-control" type="text"  placeholder="Amount Table">
+                <input id="tablebranch" name="tablebranch" required="true" class="form-control" type="number"  placeholder="Amount Table">
             </div>
         </div>
 
@@ -87,5 +87,6 @@
                 </button>
             </div>
         </div>
+        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/> 
     </form>
 </div>

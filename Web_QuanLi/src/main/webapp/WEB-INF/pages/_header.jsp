@@ -6,12 +6,13 @@
 <%@taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles" %>
 <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/png" href="../resources/assets/img/favicon.ico">
+   <link rel="icon" type="image/png" href="../resources/assets/img/favicon.ico">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta name="viewport" content="width=device-width" />
-
-
+    <!--datepicker-->
+    <link href="/resources/datepicker/css/datepicker.css" rel="stylesheet" type="text/css"/>
+    
     <!-- Bootstrap core CSS     -->
     <link href="../resources/assets/css/bootstrap.min.css" rel="stylesheet" />
 

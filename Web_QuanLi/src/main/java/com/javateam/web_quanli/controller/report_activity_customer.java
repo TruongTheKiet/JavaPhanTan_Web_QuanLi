@@ -82,7 +82,7 @@ public class report_activity_customer extends HttpServlet {
             request.setAttribute("title", "New Customer");
             request.setAttribute("errornewcustomer", "hidden");
             request.setAttribute("erroractivity", "hidden");
-            request.setAttribute("activeDishes", "activeNewCustom");
+            request.setAttribute("activeNewCustom", "active");
             String view = "/WEB-INF/index.jsp";
             RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(view);
             dispatcher.forward(request, response);

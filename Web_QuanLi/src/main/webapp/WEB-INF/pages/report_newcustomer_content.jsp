@@ -27,6 +27,8 @@
                 </button>
             </div>
         </div>
+        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/> 
+
     </form>
 
     <fieldset>
@@ -38,7 +40,7 @@
 
             <label class="col-sm-2 control-label" for="phone">Phone Customer</label>
             <div class="col-sm-2 ">
-                <input id="phone" name="phone" required="true" class=" day form-control" type="text"  placeholder="">
+                <input maxlength="15" id="phone" name="phone" required="true" class=" day form-control" type="text"  placeholder="">
             </div>
             <label class="col-sm-1 control-label" for="categorydishes">Month</label>
             <div class="col-sm-2">
@@ -71,5 +73,7 @@
                 </button>
             </div>
         </div>
+        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/> 
+
     </form>
 </div>

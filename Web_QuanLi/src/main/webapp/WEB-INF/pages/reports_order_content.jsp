@@ -30,14 +30,14 @@
             <div class="form-group form-group-lg">
                 <label class="col-sm-2 control-label" for="day"> Day</label>
                 <div class="col-sm-3 ">
-                    <input id="day" name="day" required="true" class=" day form-control" type="text"  placeholder="dd-mm-yyyy">
+                    <input maxlength="10" id="day" name="day" required="true" class=" day form-control" type="text"  placeholder="YYYY-MM-DD">
                 </div>
 
                 <label class="col-sm-2 control-label" for="id_loai">Type Order</label>
                 <div class="col-sm-3">
                     <select id="id_loai" name="id_loai"  type="text" class="form-control" >
                         <option value="-1"> All</option>
-                       
+
                         <option value="0">At Store</option>
                         <option value="1">Take Away</option>
                         <option value="2">Online</option>
@@ -55,6 +55,8 @@
                     <label class=" <%=errorday%> col-sm-9 control-label" style="color: red">Data not exist</label>
                 </div>
             </div>
+            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/> 
+
         </form>
     </div>
     <div class="tab-pane" id="week_month" role="tabpanel">
@@ -62,18 +64,18 @@
             <div class="form-group form-group-lg">
                 <label class="col-sm-2 control-label" for="day_from">Date from</label>
                 <div class="col-sm-2 ">
-                    <input id="day_from" name="day_from" required="true" class=" day form-control" type="text"  placeholder="dd-mm-yyyy">
+                    <input maxlength="10" id="day_from" name="day_from" required="true" class=" day form-control" type="text"  placeholder="YYYY-MM-DD">
                 </div>
                 <label class="col-sm-1 control-label" for="day_to">Date to</label>
                 <div class="col-sm-2 ">
-                    <input id="day_to" name="day_to" required="true" class=" day form-control" type="text"  placeholder="dd-mm-yyyy">
+                    <input maxlength="10" id="day_to" name="day_to" required="true" class=" day form-control" type="text"  placeholder="YYYY-MM-DD">
                 </div>
 
                 <label class="col-sm-2 control-label" for="id_loai">Type Order</label>
                 <div class="col-sm-2">
                     <select id="id_loai" name="id_loai"  type="text" class="form-control" >
                         <option value="-1"> All</option>
-                       
+
                         <option value="0">At Store</option>
                         <option value="1">Take Away</option>
                         <option value="2">Online</option>
@@ -95,6 +97,7 @@
                     </button>
                 </div>
             </div>
+            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/> 
 
         </form>
     </div>
@@ -118,11 +121,11 @@
                         <option value="2017">2017</option>
                     </select>
                 </div>
-               <label class="col-sm-2 control-label" for="id_loai">Type Order</label>
+                <label class="col-sm-2 control-label" for="id_loai">Type Order</label>
                 <div class="col-sm-2">
                     <select id="id_loai" name="id_loai"  type="text" class="form-control" >
                         <option value="-1"> All</option>
-                       
+
                         <option value="0">At Store</option>
                         <option value="1">Take Away</option>
                         <option value="2">Online</option>
@@ -134,6 +137,7 @@
                     </button>
                 </div>
             </div>
+            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/> 
 
         </form>
     </div>
@@ -149,11 +153,11 @@
                         <option value="2017">2017</option>
                     </select>
                 </div>
-              <label class="col-sm-2 control-label" for="id_loai">Type Order</label>
+                <label class="col-sm-2 control-label" for="id_loai">Type Order</label>
                 <div class="col-sm-2">
                     <select id="id_loai" name="id_loai"  type="text" class="form-control" >
                         <option value="-1"> All</option>
-                       
+
                         <option value="0">At Store</option>
                         <option value="1">Take Away</option>
                         <option value="2">Online</option>
@@ -171,6 +175,8 @@
                     <label class=" <%=erroryear%> col-sm-9 control-label" style="color: red">Data not exist</label>
                 </div>
             </div>
+            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/> 
+
         </form>
     </div>
 

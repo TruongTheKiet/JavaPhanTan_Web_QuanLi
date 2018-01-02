@@ -76,8 +76,7 @@ $("#updateRestaurant").click(function () {
 });
 
 
-//
-//$('.date').click(function () {$('.date').datepicker();})
+$('.day').datepicker();
 
 //
 //$(document).ready(function () {

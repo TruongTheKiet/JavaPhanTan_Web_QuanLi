@@ -25,6 +25,7 @@
 <script src="resources/jsFile.js"></script>
 
 <script src="resources/assets/js/bootstrap-datepicker.js"></script>
+<script src="/sresources/datepicker/js/datepicker.js" type="text/javascript"></script>
 
 <!--<script type="text/javascript">
     $(document).ready(function() {

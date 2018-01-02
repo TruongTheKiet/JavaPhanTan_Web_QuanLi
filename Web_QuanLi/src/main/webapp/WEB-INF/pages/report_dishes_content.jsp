@@ -23,7 +23,7 @@
             <div class="col-sm-2">
                 <select id="thang" name="thang"  type="text" class="form-control" >
                     <%for(int i = 1; i < 13 ; i++){%>
-                        <option value="<%=i%>"><%=i%></option>
+                    <option value="<%=i%>"><%=i%></option>
                     <%}%>
                 </select>
             </div>
@@ -52,6 +52,7 @@
                 </button>
             </div>
         </div>
+        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/> 
 
     </form>
 </div>

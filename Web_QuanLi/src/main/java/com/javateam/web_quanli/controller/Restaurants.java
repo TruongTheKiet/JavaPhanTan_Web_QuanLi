@@ -50,6 +50,7 @@ public class Restaurants extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        if(request.getParameter("branchSearch").trim().compareTo("") != 0){
         String url = this.defaultUrl + "/getChiNhanh/Search/" + request.getParameter("branchSearch");
         request.setAttribute("page", "Restaurants");
         request.setAttribute("title", "Restaurants");
@@ -59,7 +60,10 @@ public class Restaurants extends HttpServlet {
         request.setAttribute("listBranch", listBranch);
         String view = "/WEB-INF/index.jsp";
         RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(view);
-        dispatcher.forward(request, response);
+        dispatcher.forward(request, response);}
+        else{
+            response.sendRedirect("/Restaurants");
+        }
     }
 
     @Override

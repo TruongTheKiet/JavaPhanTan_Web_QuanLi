@@ -44,7 +44,7 @@ public class search_dishes extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        if (request.getParameter("monanSearch").compareTo("") == 0) {
+        if (request.getParameter("monanSearch").trim().compareTo("") == 0) {
             response.sendRedirect("/searchDishes");
             return;
         } else {

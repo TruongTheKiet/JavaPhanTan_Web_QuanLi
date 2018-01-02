@@ -18,10 +18,12 @@
                         <div class="input-append">
                             <div class="form-group">
                                 <label style="margin-right: 20px" for="branchSearch" >Name Category</label>
-                                <input style="width: 450px" type="text" class="form-control" id='nameCategory' name='nameCategory' placeholder="Name branch">
+                                <input required="true" style="width: 450px" type="text" class="form-control" id='nameCategory' name='nameCategory' placeholder="Name branch">
                             </div>
                             <button type="submit" class="btn">Add</button>
                         </div>
+                        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/> 
+
                     </form>
                 </div>
 
@@ -82,6 +84,8 @@
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                             <button type="submit" class="btn btn-primary">Save</button>
                         </div>
+                        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/> 
+                    
                     </form>
                 </div>
             </div>
