@@ -248,7 +248,7 @@ public class Helper {
         }
     }
     
-     public List<DonHang> parseDonHanf(String objectJson) {
+     public List<DonHang> parseDonHang(String objectJson) {
         try {
             ObjectMapper objectMapper = new ObjectMapper();
             //Set pretty printing of json

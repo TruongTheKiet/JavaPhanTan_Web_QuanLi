@@ -76,6 +76,22 @@
         <servlet-name>report_cost_quarterly</servlet-name>
         <servlet-class>com.javateam.web_quanli.controller.report_cost_quarterly</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>report_order</servlet-name>
+        <servlet-class>com.javateam.web_quanli.controller.report_order</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>report_order_week_month</servlet-name>
+        <servlet-class>com.javateam.web_quanli.controller.report_order_week_month</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>report_order_quarterly</servlet-name>
+        <servlet-class>com.javateam.web_quanli.controller.report_order_quarterly</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>report_order_year</servlet-name>
+        <servlet-class>com.javateam.web_quanli.controller.report_order_year</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Restaurants</servlet-name>
         <url-pattern>/Restaurants</url-pattern>
@@ -152,6 +168,22 @@
     <servlet-mapping>
         <servlet-name>report_cost_quarterly</servlet-name>
         <url-pattern>/reportCostQuarterly</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>report_order</servlet-name>
+        <url-pattern>/reportOrder</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>report_order_week_month</servlet-name>
+        <url-pattern>/reportOrderWeekMonth</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>report_order_quarterly</servlet-name>
+        <url-pattern>/reportOrderQuarterly</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>report_order_year</servlet-name>
+        <url-pattern>/reportOrderYear</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

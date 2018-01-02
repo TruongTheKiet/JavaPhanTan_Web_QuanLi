@@ -44,4 +44,7 @@
      <definition name="reportCost" extends="Page">
         <put-attribute name="_content" value="/WEB-INF/pages/report_cost_content.jsp"/>
     </definition>
+     <definition name="reportOrder" extends="Page">
+        <put-attribute name="_content" value="/WEB-INF/pages/reports_order_content.jsp"/>
+    </definition>
 </tiles-definitions>

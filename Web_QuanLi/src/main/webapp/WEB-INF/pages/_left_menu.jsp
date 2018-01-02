@@ -45,8 +45,8 @@
                 </a>
             </li>
             
-            <li class="${activeReport}">
-                <a href="reports">
+            <li class="${activeReportOrder}">
+                <a href="reportOrder">
                     <img class="tab-icon" src="resources/assets/img/icon_order.png"/>
                     <p>Amount Order Reports</p>
                 </a>

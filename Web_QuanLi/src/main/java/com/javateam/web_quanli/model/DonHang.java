@@ -13,11 +13,11 @@ import java.io.Serializable;
  */
 public class DonHang implements Serializable{
     public String time;
-    public int sodh;
+    public int donhang;
 
-    public DonHang(String time, int sodh) {
+    public DonHang(String time, int donhang) {
         this.time = time;
-        this.sodh = sodh;
+        this.donhang = donhang;
     }
 
     public DonHang() {
@@ -31,12 +31,14 @@ public class DonHang implements Serializable{
         this.time = time;
     }
 
-    public int getSodh() {
-        return sodh;
+    public int getDonhang() {
+        return donhang;
     }
 
-    public void setSodh(int sodh) {
-        this.sodh = sodh;
+    public void setDonhang(int donhang) {
+        this.donhang = donhang;
     }
+
+    
     
 }

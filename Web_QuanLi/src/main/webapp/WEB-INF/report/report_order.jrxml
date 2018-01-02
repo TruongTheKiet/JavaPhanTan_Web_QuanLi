@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c67123c1-7106-45ac-b7bd-fc2a8e0719e9">
+	<property name="ireport.zoom" value="0.9090909090909092"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="192"/>
+	<subDataset name="dataChart" uuid="c3f0652b-4447-4dee-a0cd-5a05fffab331">
+		<field name="time" class="java.lang.String"/>
+		<field name="donhang" class="java.lang.Integer"/>
+	</subDataset>
+	<parameter name="date" class="java.lang.String"/>
+	<parameter name="titleDate" class="java.lang.String"/>
+	<parameter name="type_order" class="java.lang.String"/>
+	<parameter name="total_order" class="java.lang.Integer"/>
+	<field name="listDonHang" class="java.util.List"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="60" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="-8" width="555" height="55" backcolor="#003399" uuid="facb7551-a148-4db2-817f-ddc6f4d9d8ce"/>
+			</rectangle>
+			<elementGroup>
+				<staticText>
+					<reportElement x="138" y="0" width="278" height="38" forecolor="#FFFFFF" uuid="0a1c2333-b898-4959-b65d-932b58363825"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="24" isBold="true"/>
+					</textElement>
+					<text><![CDATA[REPORT ORDER]]></text>
+				</staticText>
+			</elementGroup>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="59" splitType="Stretch">
+			<textField>
+				<reportElement x="232" y="0" width="273" height="20" uuid="dafa043e-8221-40ad-b9be-9b8e423e6263"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="15" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="156" y="0" width="65" height="20" uuid="c4ea8f1a-2e87-4f1b-a0ba-7ec967caf2cb"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{titleDate}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="31" y="31" width="95" height="18" uuid="af8e4f2f-78b6-4b88-a2b1-9d65c3821929"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="13" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Type order :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="137" y="31" width="100" height="20" uuid="1fe859ad-46bd-4c62-aab3-b91fe56b554c"/>
+				<textElement verticalAlignment="Middle">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{type_order}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="271" y="31" width="95" height="18" uuid="4781602f-6c78-49eb-9ab5-5b2171784ac2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="13" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Total order :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="377" y="31" width="100" height="20" uuid="f517b4cb-5ec7-4a27-9ee3-add606371e3f"/>
+				<textElement verticalAlignment="Middle">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{total_order}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="397">
+			<staticText>
+				<reportElement x="232" y="0" width="83" height="30" forecolor="#0066FF" uuid="3a0643d1-b3c1-4e31-955b-7b300a670a5f"/>
+				<textElement textAlignment="Center">
+					<font size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CHART]]></text>
+			</staticText>
+			<barChart>
+				<chart>
+					<reportElement x="67" y="42" width="438" height="276" uuid="bdf0791f-9539-4473-9f8b-299ed8ff4215"/>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<categoryDataset>
+					<dataset>
+						<datasetRun subDataset="dataChart" uuid="1cbf5225-b311-4e95-bebb-28d78f095c0a">
+							<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{listDonHang})]]></dataSourceExpression>
+						</datasetRun>
+					</dataset>
+					<categorySeries>
+						<seriesExpression><![CDATA["Order"]]></seriesExpression>
+						<categoryExpression><![CDATA[$F{time}]]></categoryExpression>
+						<valueExpression><![CDATA[$F{donhang}]]></valueExpression>
+					</categorySeries>
+				</categoryDataset>
+				<barPlot>
+					<plot/>
+					<itemLabel/>
+					<categoryAxisFormat>
+						<axisFormat/>
+					</categoryAxisFormat>
+					<valueAxisFormat>
+						<axisFormat/>
+					</valueAxisFormat>
+				</barPlot>
+			</barChart>
+			<staticText>
+				<reportElement x="232" y="333" width="83" height="30" forecolor="#0066FF" uuid="0d6f034d-5b0b-46c7-8be2-24a005f1b565"/>
+				<textElement textAlignment="Center">
+					<font size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Detail]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="132" y="377" width="100" height="20" uuid="38b07038-8ea1-4cb7-ac25-6e726d3cff66"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Time]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="232" y="377" width="200" height="20" uuid="78008e2e-3dc4-4260-8b18-1a93c74ea3b3"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Total order]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="113">
+			<componentElement>
+				<reportElement x="132" y="0" width="300" height="20" uuid="345b86f8-74db-4b91-bc50-ec82523f13a2"/>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
+					<datasetRun subDataset="dataChart" uuid="203201d2-4e0e-40f7-9d07-64b01895b201">
+						<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{listDonHang})]]></dataSourceExpression>
+					</datasetRun>
+					<jr:listContents height="20" width="300">
+						<textField>
+							<reportElement x="0" y="0" width="100" height="20" uuid="00a88a3c-e966-4a1d-a4df-40fe058d3435"/>
+							<box>
+								<pen lineWidth="0.5"/>
+								<topPen lineWidth="0.5"/>
+								<leftPen lineWidth="0.5"/>
+								<bottomPen lineWidth="0.5"/>
+								<rightPen lineWidth="0.5"/>
+							</box>
+							<textElement textAlignment="Center" verticalAlignment="Middle"/>
+							<textFieldExpression><![CDATA[$F{time}]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="100" y="0" width="200" height="20" uuid="85b344d7-c262-486c-8bd0-7a75450d0782"/>
+							<box>
+								<pen lineWidth="0.5"/>
+								<topPen lineWidth="0.5"/>
+								<leftPen lineWidth="0.5"/>
+								<bottomPen lineWidth="0.5"/>
+								<rightPen lineWidth="0.5"/>
+							</box>
+							<textElement textAlignment="Center" verticalAlignment="Middle"/>
+							<textFieldExpression><![CDATA[$F{donhang}]]></textFieldExpression>
+						</textField>
+					</jr:listContents>
+				</jr:list>
+			</componentElement>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="40" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
