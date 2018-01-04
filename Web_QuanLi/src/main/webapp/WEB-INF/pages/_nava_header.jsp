@@ -22,7 +22,7 @@
                         <p><i class="fa fa-user" aria-hidden="true"></i> ${userDetails.username}</p>
                     </a>
                 </li>
-                <form class="hidden" method="post" action="/logout" id="form-logout">
+                <form class="hidden" method="post" action="${pageContext.request.contextPath}/logout" id="form-logout">
                     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
                 </form>
                 <li class="navbar-logout-btn" >

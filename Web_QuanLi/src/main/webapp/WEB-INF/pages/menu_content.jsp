@@ -14,7 +14,7 @@
         <div style="margin-bottom: 20px; text-align: center" class="container">
             <div class="row">
                 <div class="span4">
-                    <form class="form-inline" method='post' action = 'Menu'>
+                    <form class="form-inline" method='post' action = '${pageContext.request.contextPath}/Menu'>
                         <div class="input-append">
                             <div class="form-group">
                                 <label style="margin-right: 20px" for="branchSearch" >Name Category</label>
@@ -69,7 +69,7 @@
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
-                    <form method='post' action = 'editMenu'>
+                    <form method='post' action = '${pageContext.request.contextPath}/editMenu'>
                         <div class="modal-body">
                             <div class="form-group">
                                 <label for="recipient-name" class="col-form-label">ID</label>

@@ -130,7 +130,7 @@ public class edit_Dishes extends HttpServlet {
             helper.pushData(url, helper.parseClassToJson(monanAdd), "PUT");
         }
         
-        response.sendRedirect("/searchDishes");
+        response.sendRedirect("searchDishes");
     }
 
     @Override

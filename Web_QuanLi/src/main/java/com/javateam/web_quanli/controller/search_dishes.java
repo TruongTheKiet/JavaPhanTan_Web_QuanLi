@@ -45,7 +45,7 @@ public class search_dishes extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         if (request.getParameter("monanSearch").trim().compareTo("") == 0) {
-            response.sendRedirect("/searchDishes");
+            response.sendRedirect("searchDishes");
             return;
         } else {
             String url = this.defaultUrl + "/getMonAn/Search/" + request.getParameter("monanSearch");
@@ -54,6 +54,7 @@ public class search_dishes extends HttpServlet {
             request.setAttribute("activeDishes", "active");
             String objectJSON = helper.getData(url);
             List<MonAn> listMonAn = helper.parseMonAn(objectJSON);
+            
             request.setAttribute("listMonAn", listMonAn);
             String view = "/WEB-INF/index.jsp";
             RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(view);

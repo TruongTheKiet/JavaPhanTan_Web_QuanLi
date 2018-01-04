@@ -9,7 +9,7 @@
 <%@taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles" %>
 <div style="margin: auto;">
     <div id="searchmonan" >
-        <a href="/Dishes"type="button" class="btn btn-primary" style=" margin: auto;float: left" ><i class=" fa-lg fa fa-plus"></i>Add Dish</a>
+        <a href="${pageContext.request.contextPath}/Dishes"type="button" class="btn btn-primary" style=" margin: auto;float: left" ><i class=" fa-lg fa fa-plus"></i>Add Dish</a>
         <!--button search-->
         <div style="margin-bottom: 20px; text-align: center" class="container">
             <div class="row">
@@ -51,7 +51,7 @@
                     <td style="width: 350px" ><%=monan.getTen()%></td>
                     <td style="width: 200px" ><%=monan.getGia()%></td>
                     <td>
-                        <a href="/editDishes?id=<%=monan.getId()%>" type="button" class="btn btn-primary btn-sm"><b>Detail</b></a>
+                        <a href="${pageContext.request.contextPath}/editDishes?id=<%=monan.getId()%>" type="button" class="btn btn-primary btn-sm"><b>Detail</b></a>
                     </td>
 
                 </tr>

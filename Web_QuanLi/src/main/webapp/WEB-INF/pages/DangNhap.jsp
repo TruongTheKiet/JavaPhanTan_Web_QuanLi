@@ -33,7 +33,7 @@
                         <div class="panel-body">
                             <div class="row">
                                 <div class="col-lg-12">
-                                    <form id="login-form" action="/j_spring_security_check" method="post" role="form" style="display: block;">
+                                    <form id="login-form" action="${pageContext.request.contextPath}/j_spring_security_check" method="post" role="form" style="display: block;">
                                         <div class="form-group">
                                             <label for="TENTAIKHOAN">Username</label>
                                             <input type="text" name="username" id="TENTAIKHOAN" tabindex="1" class="form-control" placeholder="Username" value="">

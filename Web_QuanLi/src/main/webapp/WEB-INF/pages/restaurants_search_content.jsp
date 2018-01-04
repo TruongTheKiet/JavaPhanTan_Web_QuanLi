@@ -45,7 +45,7 @@
                     <td style="width: 350px" ><%=branch.getTinhThanh()%></td>
                     <td style="width: 200px" ><%=branch.getSdt()%></td>
                     <td>
-                        <a href="/editRestaurant?id=<%=branch.getId()%>" type="button" class="btn btn-primary btn-sm"><b>Detail</b></a>
+                        <a href="${pageContext.request.contextPath}/editRestaurant?id=<%=branch.getId()%>" type="button" class="btn btn-primary btn-sm"><b>Detail</b></a>
                     </td>
 
                 </tr>

@@ -92,7 +92,7 @@ public class editRestaurant extends HttpServlet {
 
         url = this.defaultUrl + "/deleteMenu/" + id + "/" + list_monanDelete;
         helper.pushData(url, add, "DELETE");
-        response.sendRedirect("/Restaurants");
+        response.sendRedirect("Restaurants");
     }
 
     @Override

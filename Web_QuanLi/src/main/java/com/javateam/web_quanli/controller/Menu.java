@@ -49,6 +49,9 @@ public class Menu extends HttpServlet {
         danhmuc.tenDanhMuc = name;
         helper.pushData(url, helper.parseClassToJson(danhmuc), "POST");
         
+        /*Update Category in Webpage*/
+        helper.getData("http://localhost:8080/QuanAnWebApp-1.0-SNAPSHOT/api/update/danhmuc");
+        
         this.doGet(request, response);
     }
 

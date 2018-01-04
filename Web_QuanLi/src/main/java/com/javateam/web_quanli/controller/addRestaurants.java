@@ -66,7 +66,11 @@ public class addRestaurants extends HttpServlet {
          url = this.defaultUrl + "/addMenu";
          String add = "{\"id_branch\": "+ id_branchadd +",\"list_id_monan\":\""+ list_monan +"\"}";
          helper.pushData(url, add , "POST");
-        response.sendRedirect("/Restaurants");
+         
+          /*Update Branch in Webpage*/
+        helper.getData("http://localhost:8080/QuanAnWebApp-1.0-SNAPSHOT/api/update/chinhanh");
+        
+        response.sendRedirect("Restaurants");
     }
 
     /**

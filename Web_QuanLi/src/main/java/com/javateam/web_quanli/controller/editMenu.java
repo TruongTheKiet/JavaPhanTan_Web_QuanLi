@@ -41,7 +41,7 @@ public class editMenu extends HttpServlet {
         danhmuc.tenDanhMuc = name;
         danhmuc.id = id;
         helper.pushData(url, helper.parseClassToJson(danhmuc), "PUT");
-        response.sendRedirect("/Menu");
+        response.sendRedirect("Menu");
     }
 
     @Override

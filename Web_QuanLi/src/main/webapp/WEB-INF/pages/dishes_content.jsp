@@ -3,7 +3,7 @@
 <%@page import="java.util.List"%>
 <%@taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles" %>
 <div >
-    <form class="form-horizontal" method="POST" action="/Dishes" enctype="multipart/form-data">
+    <form class="form-horizontal" method="POST" action="${pageContext.request.contextPath}/Dishes" enctype="multipart/form-data">
         <div class="form-group form-group-lg">
             <label class="col-sm-2 control-label" for="namedishes">Name dishes</label>
             <div class="col-sm-8 ">

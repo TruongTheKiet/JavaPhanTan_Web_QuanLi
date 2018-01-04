@@ -34,7 +34,7 @@
 
     <link href="../resources/assets/css/datepicker.css" rel="stylesheet" />
     <!--my css-->
-    <link href="../resources/cssFile.css" rel="stylesheet" />
+    <link href="./resources/cssFile.css" rel="stylesheet" />
 
     <title> ${title} </title>
 

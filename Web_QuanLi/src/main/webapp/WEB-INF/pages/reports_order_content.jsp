@@ -49,12 +49,7 @@
                     </button>
                 </div>
             </div>
-            <div class="form-group form-group-lg">    
-                <div class="col-sm-2 "></div>
-                <div class="col-sm-3 ">
-                    <label class=" <%=errorday%> col-sm-9 control-label" style="color: red">Data not exist</label>
-                </div>
-            </div>
+
             <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/> 
 
         </form>
@@ -82,12 +77,7 @@
                     </select>
                 </div>
             </div>
-            <div class="form-group form-group-lg">    
-                <div class="col-sm-2 "></div>
-                <div class="col-sm-3 ">
-                    <label class=" <%=errorweekmonth%> col-sm-9 control-label" style="color: red">Data not exist</label>
-                </div>
-            </div>
+
             <div class="form-group form-group-lg">
                 <div class="col-sm-4">
                 </div>
@@ -169,12 +159,7 @@
                     </button>
                 </div>
             </div>
-            <div class="form-group form-group-lg">    
-                <div class="col-sm-2 "></div>
-                <div class="col-sm-3 ">
-                    <label class=" <%=erroryear%> col-sm-9 control-label" style="color: red">Data not exist</label>
-                </div>
-            </div>
+           
             <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/> 
 
         </form>

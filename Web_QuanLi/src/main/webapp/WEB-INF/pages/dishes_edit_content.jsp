@@ -12,7 +12,7 @@
     <%
         MonAn monan = (MonAn) request.getAttribute("monan");
     %>
-    <form class="form-horizontal" method="POST" action="/editDishes" enctype="multipart/form-data">
+    <form class="form-horizontal" method="POST" action="${pageContext.request.contextPath}/editDishes" enctype="multipart/form-data">
         <div class="form-group form-group-lg">
             <label class="col-sm-2 control-label" for="iddishes">ID dishes</label>
             <div class="col-sm-8 ">

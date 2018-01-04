@@ -21,50 +21,50 @@
                 </a>
             </li>-->
             <li class="${activeRestaurants}">
-                <a href="/Restaurants">
+                <a href="${pageContext.request.contextPath}/Restaurants">
                     <img class="tab-icon" src="resources/assets/img/icon_restaurants.png"/>
                     <p>Restaurants</p>
                 </a>
             </li>
             <li class="${activeMenu}">
-                <a href="/Menu">
+                <a href="${pageContext.request.contextPath}/Menu">
                     <img class="tab-icon" src="resources/assets/img/icon_menus.png"/>
                     <p>Menus</p>
                 </a>
             </li>
             <li class="${activeDishes}">
-                <a href="searchDishes">
+                <a href="${pageContext.request.contextPath}/searchDishes">
                     <img class="tab-icon" src="resources/assets/img/icon_dishes.png"/>
                     <p>Dishes</p>
                 </a>
             </li>
             <li class="${activeRevenue}">
-                <a href="reportRevenue">
+                <a href="${pageContext.request.contextPath}/reportRevenue">
                     <img class="tab-icon" src="resources/assets/img/icon_revenue.png"/>
                     <p>Revenue Reports</p>
                 </a>
             </li>
             
             <li class="${activeReportOrder}">
-                <a href="reportOrder">
+                <a href="${pageContext.request.contextPath}/reportOrder">
                     <img class="tab-icon" src="resources/assets/img/icon_order.png"/>
                     <p>Amount Order Reports</p>
                 </a>
             </li>
             <li class="${activerReportCost}">
-                <a href="reportCost">
+                <a href="${pageContext.request.contextPath}/reportCost">
                     <img class="tab-icon" src="resources/assets/img/icon_cost.png"/>
                     <p>Cost Reports</p>
                 </a>
             </li>
             <li class="${activerReportDishes}">
-                <a href="reportDishes">
+                <a href="${pageContext.request.contextPath}/reportDishes">
                     <img class="tab-icon" src="resources/assets/img/icon_reports.png"/>
                     <p>Dishes Reports</p>
                 </a>
             </li>
             <li class="${activeNewCustom}">
-                <a href="reportNewCustomer">
+                <a href="${pageContext.request.contextPath}/reportNewCustomer">
                     <img class="tab-icon" src="resources/assets/img/icon_report2.png"/>
                     <p>Customer Reports</p>
                 </a>
